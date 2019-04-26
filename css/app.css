@@ -15,6 +15,7 @@ main {
     display: flex; }
   main .left {
     width: 200px;
+    padding: 70px 20px;
     flex: none;
     display: inline-block; }
   main .right {
@@ -23,19 +24,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2b2c2c; }
+    background: #2b2c2c;
+    min-height: 350px; }
     main .about-content .about-div {
       flex: none;
       width: 70%; }
   main .welcome {
-    background: #2b2c2c;
-    min-width: 200px;
-    display: inline-block;
-    display: flex;
-    flex-direction: column; }
-    main .welcome .welcome-wrapper {
-      height: 400px;
-      margin: auto; }
+    background: #2b2c2c; }
     main .welcome p {
       font-size: 0.9em; }
       main .welcome p .fa-envelope {
@@ -57,7 +52,7 @@ header {
   justify-content: space-between;
   padding: 7px 30px;
   position: relative;
-  height: 100px;
+  height: 80px;
   transition: 0.5s; }
   header .change + .sidenav {
     width: 180px; }
@@ -98,6 +93,14 @@ header {
     header .brand h2 {
       align-self: center; }
 
+@keyframes fixIcon {
+  from {
+    top: 25px;
+    right: 30px; }
+  to {
+    top: 18px;
+    right: 22px; } }
+
 .sidenavButton {
   display: inline-block;
   cursor: pointer;
@@ -106,14 +109,20 @@ header {
   z-index: 5;
   position: relative;
   transform: scale(0.8); }
+  .sidenavButton.change {
+    position: fixed;
+    animation: fixIcon 0.4s forwards; }
   .sidenavButton .bar1,
   .sidenavButton .bar2,
   .sidenavButton .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #fff;
+    background-color: #f1b200;
     margin: 6px 0;
     transition: 0.4s; }
+  .sidenavButton .bar2 {
+    width: 20px;
+    margin-left: 14px; }
   .sidenavButton.change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px); }
@@ -133,7 +142,8 @@ footer {
   left: 0;
   top: 0;
   bottom: 0;
-  background: #000; }
+  background: #000;
+  user-select: none; }
   footer p {
     display: block;
     height: 20px;
@@ -235,13 +245,18 @@ a:visited:active {
     padding: 10px; }
     .about-content .form .input-group {
       width: 100%;
-      padding: 10px; }
+      padding: 10px;
+      margin: auto; }
 
 #contact {
   color: #777777; }
 
 .contact {
   display: flex; }
+  .contact .contact-msg {
+    background: #2b2c2c; }
+  .contact .about-content {
+    background: #2d2e2e; }
   .contact button {
     width: 240px;
     height: 60px;
@@ -249,7 +264,8 @@ a:visited:active {
     border: 1px solid #666666;
     background: none;
     margin: 20px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: 0.5s; }
     .contact button:hover {
       color: #f1b200;
       border-color: #f1b200; }
@@ -259,7 +275,7 @@ a:visited:active {
     text-align: left; }
   .contact .form {
     margin: auto;
-    width: 100%; }
+    width: 80%; }
     .contact .form form {
       padding: 30px; }
     .contact .form .text-area .group {
@@ -270,8 +286,7 @@ a:visited:active {
       outline: none; }
     .contact .form .group {
       display: inline-block;
-      width: 48%;
-      flex: none; }
+      width: 48%; }
     .contact .form input {
       outline: none;
       border: none;
@@ -287,3 +302,27 @@ a:visited:active {
       width: 100%;
       display: flex;
       justify-content: space-between; }
+
+@media screen and (max-width: 1000px) {
+  .input-group {
+    flex-wrap: wrap; }
+  .group {
+    width: 100% !important; }
+  .text-area {
+    width: 80%; }
+  .form {
+    width: 100%; }
+  .contact-msg,
+  .about-msg {
+    display: none !important; }
+  .portfolio-container {
+    flex-wrap: wrap; }
+  .welcome {
+    display: block;
+    width: 100% !important;
+    padding: 20px !important;
+    background: #2b2c2c;
+    min-height: 100px; }
+    .welcome .welcome-wrapper > p,
+    .welcome .welcome-wrapper > h2 {
+      display: none; } }
