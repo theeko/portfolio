@@ -8,7 +8,8 @@ body {
 
 main {
   background: #2d2e2e;
-  text-align: center; }
+  text-align: center;
+  padding-top: 80px; }
   main .content {
     width: 100%;
     height: 100%;
@@ -51,8 +52,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 7px 30px;
-  position: relative;
+  position: fixed;
   height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
   transition: 0.5s; }
   header .change + .sidenav {
     width: 180px; }
@@ -85,7 +89,7 @@ header {
         color: #bbbbbb; }
   header .brand {
     height: 40px;
-    margin: auto 0;
+    margin: auto 50px;
     font-size: 0.9em;
     font-weight: bold;
     display: flex;
@@ -109,9 +113,6 @@ header {
   z-index: 5;
   position: relative;
   transform: scale(0.8); }
-  .sidenavButton.change {
-    position: fixed;
-    animation: fixIcon 0.4s forwards; }
   .sidenavButton .bar1,
   .sidenavButton .bar2,
   .sidenavButton .bar3 {
@@ -234,6 +235,10 @@ a:visited:active {
       background-image: url("../img/tictactoe.png"); }
     .portfolio .card .img-meanvote {
       background-image: url("../img/meanvote.png"); }
+    .portfolio .card .img-booktrade {
+      background-image: url("../img/booktraderapp.png"); }
+    .portfolio .card .img-gameoflife {
+      background-image: url("../img/gameOfLife.png"); }
 
 .about-content {
   display: flex;

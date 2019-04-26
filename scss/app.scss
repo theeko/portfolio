@@ -20,6 +20,7 @@ body {
 main {
   background: $rightSide;
   text-align: center;
+  padding-top: 80px;
 
   .content {
     width: 100%;
@@ -86,8 +87,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 7px 30px;
-  position: relative;
+  position: fixed;
   height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
 
   transition: 0.5s;
 
@@ -138,7 +142,8 @@ header {
 
   .brand {
     height: 40px;
-    margin: auto 0;
+
+    margin: auto 50px;
     font-size: 0.9em;
     font-weight: bold;
     display: flex;
@@ -171,8 +176,8 @@ header {
   transform: scale(0.8);
 
   &.change {
-    position: fixed;
-    animation: fixIcon 0.4s forwards;
+    // position: fixed;
+    //animation: fixIcon 0.4s forwards;
 
     //h 34 w 32
   }
@@ -346,6 +351,14 @@ a:visited:active {
 
     .img-meanvote {
       background-image: url("../img/meanvote.png");
+    }
+
+    .img-booktrade {
+      background-image: url("../img/booktraderapp.png");
+    }
+
+    .img-gameoflife {
+      background-image: url("../img/gameOfLife.png");
     }
   }
 }
