@@ -1,11 +1,9 @@
 var sideNavButton = document.querySelector(".sidenavButton");
 var isOpen = false;
 
-function smootScroll() {}
-
 document.addEventListener("click", function(e) {
   if (e.target.matches(".filter")) {
-    let filters = document.querySelectorAll(".filter");
+    var filters = document.querySelectorAll(".filter");
 
     filters.forEach(function(filter) {
       filter.classList.remove("active");
@@ -16,7 +14,7 @@ document.addEventListener("click", function(e) {
     var cards = document.querySelectorAll(".card");
     var filter = e.target.dataset.filter;
 
-    for (let card of cards) {
+    for (var card of cards) {
       if (filter == "all") {
         card.style.display = "";
       } else if (card.dataset.type.includes(filter)) {
@@ -30,8 +28,8 @@ document.addEventListener("click", function(e) {
   if (e.target.tagName == "A" && e.target.hash) {
     e.preventDefault();
 
-    let hash = e.target.hash;
-    let section = document.querySelector(hash);
+    var hash = e.target.hash;
+    var section = document.querySelector(hash);
 
     section.scrollIntoView({ behavior: "smooth" });
   }
