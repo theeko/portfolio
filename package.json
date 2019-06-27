@@ -1,7 +1,7 @@
 {
   "name": "npm-scripts",
   "version": "1.0.0",
-  "description": "onchange(alternative: watch) if files changes runs -- command, parrallelshell is for running multiple shell commands, rimraf for cleaning/deleting folders,  npm i -g copyfiles(to copy fonts), npm install -g imagemin-cli@3.0.0 --unsafe-perm=true --allow-root(to permit unsafe download, some of the imagemin modules not installing correctly without these flags)",
+  "description": "portfolio",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,6 +9,7 @@
     "lite": "lite-server",
     "scss": "node-sass scss/app.scss css/app.css",
     "babeljs": "babel babel-js --watch --out-dir js --presets=@babel/preset-env",
+    "babeljs-nowatch": "babel babel-js --out-dir js --presets=@babel/preset-env",
     "watch:js": "onchange \"babel-js/*.js\" -- npm run babeljs",
     "watch:scss": "onchange \"scss/*.scss\" -- npm run scss",
     "watch-js-scss": "npm run watch:scss && npm run babeljs",
@@ -17,7 +18,7 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html",
-    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run babeljs-nowatch &&  npm run usemin"
   },
   "keywords": [],
   "author": "",
