@@ -30,7 +30,7 @@ main {
 
   .left {
     width: 200px;
-    padding: 50px 20px;
+    padding: 70px 20px;
     flex: none;
     display: inline-block;
   }
@@ -180,6 +180,13 @@ header {
   position: relative;
   transform: scale(0.8);
 
+  &.change {
+    // position: fixed;
+    //animation: fixIcon 0.4s forwards;
+
+    //h 34 w 32
+  }
+
   .bar1,
   .bar2,
   .bar3 {
@@ -220,18 +227,15 @@ footer {
   left: 0;
   top: 0;
   bottom: 0;
-  background: #222;
+  background: #000;
   user-select: none;
 
   a {
     white-space: nowrap;
+    padding: 5px;
     transform: rotate(-90deg);
     transform-origin: left top;
-    font-size: 0.9em;
-    font-weight: 600;
-    height: 30px;
-    display: flex;
-    align-items: center;
+    font-size: 0.8em;
   }
 
   p {
@@ -302,7 +306,7 @@ a:visited:active {
       }
 
       &.active {
-        color: $color-gold;
+        color: white;
       }
     }
   }
@@ -337,7 +341,7 @@ a:visited:active {
     }
 
     .img {
-      background: rgba(0, 0, 0, 0.7) url("../assets/images/dentist.png") no-repeat;
+      background: rgba(0, 0, 0, 0.7) url("../img/dentist.png") no-repeat;
       background-size: 100% 100%;
       width: 100%;
       height: 100%;
@@ -348,27 +352,27 @@ a:visited:active {
     }
 
     .img-simon {
-      background-image: url("../assets/images/simon.png");
+      background-image: url("../img/simon.png");
     }
 
     .img-recipe {
-      background-image: url("../assets/images/recipe.png");
+      background-image: url("../img/recipe.png");
     }
 
     .img-tictactoe {
-      background-image: url("../assets/images/tictactoe.png");
+      background-image: url("../img/tictactoe.png");
     }
 
     .img-meanvote {
-      background-image: url("../assets/images/meanvote.png");
+      background-image: url("../img/meanvote.png");
     }
 
     .img-booktrade {
-      background-image: url("../assets/images/booktraderapp.png");
+      background-image: url("../img/booktraderapp.png");
     }
 
     .img-gameoflife {
-      background-image: url("../assets/images/gameOfLife.png");
+      background-image: url("../img/gameOfLife.png");
     }
   }
 }
