@@ -2,10 +2,10 @@
 
 var sideNavButton = document.querySelector(".sidenavButton");
 var isOpen = false;
-document.addEventListener("click", function (e) {
+document.addEventListener("click", function(e) {
   if (e.target.matches(".filter")) {
     var filters = document.querySelectorAll(".filter");
-    filters.forEach(function (filter) {
+    filters.forEach(function(filter) {
       filter.classList.remove("active");
     });
     e.target.classList.add("active");
@@ -16,7 +16,11 @@ document.addEventListener("click", function (e) {
     var _iteratorError = undefined;
 
     try {
-      for (var _iterator = cards[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      for (
+        var _iterator = cards[Symbol.iterator](), _step;
+        !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
+        _iteratorNormalCompletion = true
+      ) {
         var card = _step.value;
 
         if (filter == "all") {
@@ -52,10 +56,16 @@ document.addEventListener("click", function (e) {
     });
   }
 
-  if (!isOpen && (e.target.matches(".sidenavButton") || e.target.matches(".bar"))) {
+  if (
+    !isOpen &&
+    (e.target.matches(".sidenavButton") || e.target.matches(".bar"))
+  ) {
     sideNavButton.classList.toggle("change");
     isOpen = true;
-  } else if (isOpen && (e.target.matches(".sidenavButton") || e.target.matches(".bar"))) {
+  } else if (
+    isOpen &&
+    (e.target.matches(".sidenavButton") || e.target.matches(".bar"))
+  ) {
     isOpen = false;
     sideNavButton.classList.toggle("change");
   } else if (isOpen && !e.target.matches(".sidenav-link")) {
@@ -63,7 +73,7 @@ document.addEventListener("click", function (e) {
     sideNavButton.classList.toggle("change");
   }
 });
-document.addEventListener("scroll", function (e) {
+document.addEventListener("scroll", function(e) {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     document.querySelector("header").style.height = "60px";
     document.querySelector("header").style.background = "#252525";

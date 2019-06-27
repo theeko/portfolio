@@ -227,7 +227,11 @@
 
         <section class="about-content right">
           <div class=" form">
-            <form>
+            <form
+              action="https://mailthis.to/theeko@hotmail.com"
+              method="POST"
+              encType="multipart/form-data"
+            >
               <div class="input-group">
                 <div class="group">
                   <label>
@@ -247,6 +251,7 @@
                     type="text"
                     name="email"
                     placeholder="Type your email address"
+                    required
                   />
                 </div>
               </div>
@@ -260,10 +265,23 @@
                     cols="30"
                     rows="10"
                     placeholder="Type your message"
+                    required
                   ></textarea>
                 </div>
               </div>
               <button type="submit">Send Message</button>
+              <input
+                type="hidden"
+                name="_subject"
+                value="Portfolio contact form submitted"
+              />
+              <input
+                type="hidden"
+                name="_after"
+                value="https://elastic-gates-cdc3d7.netlify.com/"
+              />
+              <input type="hidden" name="_honeypot" value="" />
+              <input type="submit" value="Send" />
             </form>
           </div>
         </section>
