@@ -30,7 +30,7 @@
     "cssmin": "^0.4.3",
     "htmlmin": "0.0.7",
     "lite-server": "^2.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "onchange": "^5.2.0",
     "parallelshell": "^3.0.1",
     "rimraf": "^2.6.3",
